@@ -1,0 +1,72 @@
+.wrapper {
+    width: 375px;
+    font-family: 'Montserrat', sans-serif;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    
+}
+
+.movieInfo {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.title {
+    font-weight: 400;
+    text-align: justify;
+}
+
+.director {
+    font-size: .8rem;
+    font-style: italic;
+    font-weight: 200;
+}
+
+.infoList {
+    display: flex;
+    font-size: .7rem;
+    list-style: none;
+    font-weight: 200;
+}
+
+.infoList > li {
+    margin-right: 10px;
+}
+
+.plot {
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+    text-align: justify;
+}
+
+.actors {
+    font-weight: 200;
+    font-size: 0.7rem;
+}
+
+img {
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, 
+        color-stop(0.00,  rgba(0,0,0,1)),
+        color-stop(0.35,  rgba(0,0,0,1)),
+        color-stop(0.50,  rgba(0,0,0,1)),
+        color-stop(0.65,  rgba(0,0,0,1)),
+        color-stop(0.85,  rgba(0,0,0,0.6)),
+        color-stop(1.00,  rgba(0,0,0,0)));
+    /* For compatibility */
+    mask-image: -webkit-gradient(linear, left top, left bottom, 
+        color-stop(0.00,  rgba(0,0,0,1)),
+        color-stop(0.35,  rgba(0,0,0,1)),
+        color-stop(0.50,  rgba(0,0,0,1)),
+        color-stop(0.65,  rgba(0,0,0,1)),
+        color-stop(0.85,  rgba(0,0,0,0.6)),
+        color-stop(1.00,  rgba(0,0,0,0)));
+    width: 100%;
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px;
+}

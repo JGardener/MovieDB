@@ -4,8 +4,6 @@ import NA from '../../Assets/img/NA.png'
 
 const Card = (props) => {
 
-    let poster = false;
-
     return (
         <div className={styles.wrapper}>
             <div className={styles.movieImage}>

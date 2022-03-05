@@ -1,0 +1,11 @@
+.wrapper {
+    width: 250px;
+    background: black;
+    color: white; 
+    padding: 10px;
+    text-align: center;
+}
+
+label {
+    margin-right: 6px;
+}

@@ -19,7 +19,8 @@ const Card = (props) => {
                     {props.released && <li>Released: <br/>{props.released}</li>}
                     {props.language && <li>Language: <br/>{props.language}</li>}
                     {props.rated && <li>Rated: <br/>{props.rated}</li>}
-                </ul>
+                    {props.runTime && <li className={styles.runTime}>Runtime: <br/>{props.runTime}</li>}
+                    {props.imdbRating && <li className={styles.imdbRating}>Rating: <br/>{props.imdbRating}</li>}                </ul>
                 <p className={styles.plot}>{props.plot}</p>
                 {props.actors && <p className={styles.actors}>Starring: {props.actors}</p>}
             </div>

@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Card from '../../Card/Card';
 import styles from './SearchResults.module.css'
 
@@ -34,13 +35,19 @@ const SearchResults = () => {
             <p>Total Results: {searchResults.totalResults}</p>
             <div className={styles.resultsWrapper}>
                 {searchResults.Search.map(item => {
-                    return(
-                        <Card 
-                            key={item.imdbID}
-                            poster={item.Poster}
-                            title={item.Title}
-                            released={item.Year}
-                        />
+                    return(      
+                        <Link 
+                            key={item.imdbID} 
+                            to={'/results/specific'}
+                            state={{movie: item.imdbID}}
+                            style={{textDecoration:'none'}}>
+                                <Card 
+                                    key={item.imdbID}
+                                    poster={item.Poster}
+                                    title={item.Title}
+                                    released={item.Year}
+                                />                        
+                        </Link>                  
                     )
                 })}
             </div>

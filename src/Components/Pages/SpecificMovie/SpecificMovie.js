@@ -31,6 +31,7 @@ const SpecificMovie = () => {
                 poster={movie.Poster}
                 title={movie.Title}
                 director={movie.Director}
+                genre={movie.Genre}
                 released={movie.Released}
                 language={movie.Language}
                 rated={movie.Rated}

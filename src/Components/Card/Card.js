@@ -14,13 +14,15 @@ const Card = (props) => {
             </div>
             <div className={styles.movieInfo}>
                 {props.title && <h1 className={styles.title}>{props.title}</h1>}
-                {props.director && <p className={styles.director}>{props.director}</p>}
+                {props.director === "N/A" || !props.director ? "" : <p className={styles.director}>Director: {props.director}</p>}
+                {props.genre && <p>Genre: {props.genre}</p>}
                 <ul className={styles.infoList}>
                     {props.released && <li>Released: <br/>{props.released}</li>}
                     {props.language && <li>Language: <br/>{props.language}</li>}
                     {props.rated && <li>Rated: <br/>{props.rated}</li>}
                     {props.runTime && <li className={styles.runTime}>Runtime: <br/>{props.runTime}</li>}
-                    {props.imdbRating && <li className={styles.imdbRating}>Rating: <br/>{props.imdbRating}</li>}                </ul>
+                    {props.imdbRating && <li className={styles.imdbRating}>Rating: <br/>{props.imdbRating}</li>}
+                </ul>
                 <p className={styles.plot}>{props.plot}</p>
                 {props.actors && <p className={styles.actors}>Starring: {props.actors}</p>}
             </div>

@@ -5,16 +5,17 @@ import Card from "../../Card/Card";
 const SpecificMovie = () => {
     const [movie, updateMovie] = useState(null); 
     const location = useLocation();
+    console.log(location);
     
     useEffect(() => {
         const getMovie = () => {
-            fetch(`http://www.omdbapi.com/?i=${location.state.movie}&apikey=${process.env.REACT_APP_API_KEY}`)
+            fetch(`http://www.omdbapi.com/?i=${location.state.movie}&plot=full&apikey=${process.env.REACT_APP_API_KEY}`)
             .then((response) => response.json())
             .then((data) => updateMovie(data))
         }
         getMovie();
 
-    }, [])
+    })
 
     console.log(movie)
 
@@ -39,6 +40,10 @@ const SpecificMovie = () => {
                 plot={movie.Plot}
                 runTime={movie.Runtime}
                 imdbRating={movie.imdbRating}
+                awards={movie.Awards}
+                boxOffice={movie.BoxOffice}
+                country={movie.Country}
+                url={location.pathname}
                 />
             </div>
         )

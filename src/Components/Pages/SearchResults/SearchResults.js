@@ -30,7 +30,7 @@ const SearchResults = () => {
         return (
         <div className={styles.wrapper}>
             <h1>Search Results:</h1>
-            <p>You searched for: {location.state.searchParam}</p>
+            <p>You searched for: {location.state.searchParam.replace(/\+/g, " ")}</p>
             <p>Total Results: {searchResults.totalResults}</p>
             <div className={styles.resultsWrapper}>
                 {searchResults.Search.map(item => {

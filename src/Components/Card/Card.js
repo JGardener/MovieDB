@@ -1,8 +1,17 @@
+import { Link } from 'react-router-dom'
 import styles from './Card.module.css'
 import NA from '../../Assets/img/NA.png'
 
 
 const Card = (props) => {
+
+    const addToList = () => {
+        window.localStorage.setItem(props.id, props.title);
+    }
+
+    const removeFromList = () => {
+        window.localStorage.removeItem(props.id)
+    }
 
     if(props.url === "/results/specific"){
         return(
@@ -23,7 +32,10 @@ const Card = (props) => {
                     
 
                     <div className={styles.buttonContainer}>
-
+                        <button className={styles.cardButton} onClick={addToList}>Add to Favourites</button>
+                        <button className={styles.cardButton} onClick={removeFromList}>Remove from Favourites</button>
+                        <a href={`https://www.imdb.com/title/${props.id}/`}><button className={styles.cardButton}>Go to iMDB</button></a>
+                        <Link to="/"><button className={styles.cardButton}>Back to Home</button></Link>
                     </div>    
                 </div>
                 <div className={styles.movieImageFullContainer}>

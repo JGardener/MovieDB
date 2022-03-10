@@ -21,7 +21,7 @@ const SearchResults = () => {
     }, []);
         
     // console.log(search)
-    if(searchResults == null) {
+    if(searchResults === null) {
         return (
             <div>
                 <p>Loading...</p>
@@ -42,7 +42,6 @@ const SearchResults = () => {
                             state={{movie: item.imdbID}}
                             style={{textDecoration:'none'}}>
                                 <Card 
-                                    key={item.imdbID}
                                     poster={item.Poster}
                                     title={item.Title}
                                     released={item.Year}

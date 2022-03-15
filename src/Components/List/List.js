@@ -30,21 +30,8 @@ const List = () => {
         getStorage();
     }, []);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     if(list.length === 0){
         return null;
-=======
-=======
->>>>>>> 6085d1c8138a581e347e6a97b0a7423ed138fd84
-    // console.log(list);
-
-    if(list.length === 0){
-        return(<p>Loading</p>)
-<<<<<<< HEAD
->>>>>>> 6085d1c8138a581e347e6a97b0a7423ed138fd84
-=======
->>>>>>> 6085d1c8138a581e347e6a97b0a7423ed138fd84
     }
     else {
         return (

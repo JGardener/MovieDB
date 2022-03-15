@@ -1,8 +1,7 @@
 .wrapper {
     width: 375px;
-    font-family: 'Montserrat', sans-serif;
-    background: black;
-    color: white;
+    background: var(--card-background-color);
+    color: var(--primary-text-color);
     display: flex;
     flex-direction: column;
     border-radius: 10px;
@@ -13,9 +12,15 @@
 
 .wrapperFull {
     border-radius: 10px;
-    background: black;
-    color: white;
+    background: var(--card-background-color);
+    color: var(--primary-text-color);
     display: flex;
+<<<<<<< HEAD
+    max-width: 1000px;
+    justify-content: space-between
+=======
+    max-width: 800px;
+>>>>>>> 6085d1c8138a581e347e6a97b0a7423ed138fd84
 }
 
 .movieInfo {
@@ -30,8 +35,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
     padding: 10px;
+
 }
 
 .movieInfoFull > * {
@@ -40,6 +45,11 @@
 
 .movieImageFullContainer {
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .title {
@@ -56,7 +66,7 @@
     display: flex;
     font-size: .7rem;
     list-style: none;
-    font-weight: 200;
+    
 }
 
 .infoList > li {
@@ -66,7 +76,7 @@
 .infoListFull {
     display: flex;
     list-style: none;
-    font-weight: 400;
+    font-weight: 200;
 }
 
 .infoListFull > li {
@@ -74,16 +84,17 @@
 }
 
 .plot {
-    font-size: 0.9rem;
-    font-weight: 400;
+    font-size: 1.2rem;
+    font-weight: 300;
     margin-bottom: 5px;
     text-align: justify;
 }
 
-.actors {
-    font-weight: 200;
-    font-size: 0.7rem;
+.actors, .awards {
+    font-weight: 300;
 }
+
+
 
 .movieImageSearch {
     -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, 
@@ -108,6 +119,22 @@
 
 .movieImageFull {
     width: 100%;
-    border-top-left-radius: 10px; 
+<<<<<<< HEAD
+    border-radius: 10px;
+=======
     border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+>>>>>>> 6085d1c8138a581e347e6a97b0a7423ed138fd84
 }
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.cardButton {
+  padding: 5px 24px;
+  border-radius: 10px;
+}
+

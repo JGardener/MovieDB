@@ -1,14 +1,24 @@
+import { Link } from 'react-router-dom'
 import styles from './Card.module.css'
 import NA from '../../Assets/img/NA.png'
 
 
 const Card = (props) => {
 
+    const addToList = () => {
+        window.localStorage.setItem(props.id, props.title);
+    }
+
+    const removeFromList = () => {
+        window.localStorage.removeItem(props.id)
+    }
+
     if(props.url === "/results/specific"){
         return(
             <div className={styles.wrapperFull}>
                 <div className={styles.movieInfoFull}>
-                    <h1 className={styles.titleFull}>{props.title}</h1>
+                    <h3 className={styles.titleFull}>{props.title}</h3>
+                    <p className={styles.actors}>Starring: {props.actors}</p>
                     <ul className={styles.infoListFull}>
                         {props.released && <li>Released: <br/>{props.released}</li>}
                         {props.language && <li>Language: <br/>{props.language}</li>}
@@ -17,13 +27,12 @@ const Card = (props) => {
                         {props.imdbRating && <li className={styles.imdbRating}>Rating: <br/>{props.imdbRating}</li>}
                     </ul>
                     <p className={styles.plot}>{props.plot}</p>
-                    <p className={styles.actors}>Starring: {props.actors}</p>
                     <p className={styles.awards}>Awards: {props.awards}</p>
-                    <p className={styles.boxOffice}>Box Office: {props.boxOffice}</p>
-                    
-
                     <div className={styles.buttonContainer}>
-
+                        <button className={styles.cardButton} onClick={addToList}>Add to Favourites</button>
+                        <button className={styles.cardButton} onClick={removeFromList}>Remove from Favourites</button>
+                        <a href={`https://www.imdb.com/title/${props.id}/`}><button className={styles.cardButton}>Go to iMDB</button></a>
+                        <Link to="/"><button className={styles.cardButton}>Back to Home</button></Link>
                     </div>    
                 </div>
                 <div className={styles.movieImageFullContainer}>

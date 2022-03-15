@@ -21,7 +21,7 @@ const SearchResults = () => {
     }, []);
         
     // console.log(search)
-    if(searchResults == null) {
+    if(searchResults === null) {
         return (
             <div>
                 <p>Loading...</p>
@@ -30,9 +30,8 @@ const SearchResults = () => {
     } else {
         return (
         <div className={styles.wrapper}>
-            <h1>Search Results:</h1>
-            <p>You searched for: {location.state.searchParam.replace(/\+/g, " ")}</p>
-            <p>Total Results: {searchResults.totalResults}</p>
+            <h1 className={styles.text}>You searched for: {location.state.searchParam.replace(/\+/g, " ")}</h1>
+            <p className={styles.text}>Total Results: {searchResults.totalResults}</p>
             <div className={styles.resultsWrapper}>
                 {searchResults.Search.map(item => {
                     return(      
@@ -42,7 +41,6 @@ const SearchResults = () => {
                             state={{movie: item.imdbID}}
                             style={{textDecoration:'none'}}>
                                 <Card 
-                                    key={item.imdbID}
                                     poster={item.Poster}
                                     title={item.Title}
                                     released={item.Year}

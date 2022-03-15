@@ -1,12 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+:root{
+  --background-color: #272626f3;
+  --card-background-color: #212121;
+  --primary-text-color: #f5f5f5fb; 
+  --primary-button-color: #BB86FC;
+}
+
 
 * {
   box-sizing: border-box; 
   margin: 0;
   padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background: grey;
+  background: var(--background-color);
 }
 

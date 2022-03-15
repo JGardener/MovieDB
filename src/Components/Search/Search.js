@@ -17,8 +17,9 @@ const Search = () => {
         <div className={styles.wrapper}>
             <label htmlFor='search'>Title:</label>
             <input onChange={getSearch} type="text" placeholder="Search..."/>
-            <button>
+            <button className={styles.button}>
                 <Link 
+                    className={styles.buttonLink}
                     to={"/results"}
                     state={{searchParam: search}}
                     >Search

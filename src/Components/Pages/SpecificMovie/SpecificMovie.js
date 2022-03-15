@@ -5,7 +5,6 @@ import Card from "../../Card/Card";
 const SpecificMovie = () => {
     const [movie, updateMovie] = useState(null); 
     const location = useLocation();
-    console.log(location);
     
     useEffect(() => {
         const getMovie = () => {
@@ -14,11 +13,7 @@ const SpecificMovie = () => {
             .then((data) => updateMovie(data))
         }
         getMovie();
-
-    })
-
-    console.log(movie)
-
+    },[])
 
     if(movie == null){
         return(
@@ -44,6 +39,7 @@ const SpecificMovie = () => {
                 boxOffice={movie.BoxOffice}
                 country={movie.Country}
                 url={location.pathname}
+                id={movie.imdbID}
                 />
             </div>
         )

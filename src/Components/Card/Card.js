@@ -32,7 +32,7 @@ const Card = (props) => {
                         <button className={styles.cardButton} onClick={addToList}>Add to Favourites</button>
                         <button className={styles.cardButton} onClick={removeFromList}>Remove from Favourites</button>
                         <a href={`https://www.imdb.com/title/${props.id}/`}><button className={styles.cardButton}>Go to iMDB</button></a>
-                        <Link to="/"><button className={styles.cardButton}>Back to Home</button></Link>
+                        <Link to="/moviedb"><button className={styles.cardButton}>Back to Home</button></Link>
                     </div>    
                 </div>
                 <div className={styles.movieImageFullContainer}>

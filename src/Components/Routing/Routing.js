@@ -13,7 +13,7 @@ const Routing = () => {
     return(
         <Router>
             <Routes>
-                <Route exact path="/" element={<Landing />}/>
+                <Route path="/moviedb" element={<Landing />}/>
                 <Route path="/results" element={<SearchResults/>}/>
                 <Route path="/results/specific" element={<SpecificMovie/>}/>
             </Routes>

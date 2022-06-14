@@ -1,131 +1,139 @@
 .wrapper {
-    width: 375px;
-    background: var(--card-background-color);
-    color: var(--primary-text-color);
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    margin: 10px;
-    justify-content: space-between;
-    
+  width: 375px;
+  background: var(--card-background-color);
+  color: var(--primary-text-color);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin: 10px;
+  justify-content: space-between;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .wrapperFull {
-    border-radius: 10px;
-    background: var(--card-background-color);
-    color: var(--primary-text-color);
-    display: flex;
-    max-width: 1000px;
-    justify-content: space-between
+  border-radius: 10px;
+  background: var(--card-background-color);
+  color: var(--primary-text-color);
+  display: flex;
+  max-width: 1000px;
+  justify-content: space-between;
 }
 
 .movieInfo {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .movieInfoFull {
-    width: 65%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px;
-
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
 }
 
 .movieInfoFull > * {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .movieImageFullContainer {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-grow: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .title {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .director {
-    font-size: .8rem;
-    font-style: italic;
-    font-weight: 200;
+  font-size: 0.8rem;
+  font-style: italic;
+  font-weight: 200;
 }
 
 .infoList {
-    display: flex;
-    font-size: .7rem;
-    list-style: none;
-    
+  display: flex;
+  font-size: 0.7rem;
+  list-style: none;
 }
 
 .infoList > li {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .infoListFull {
-    display: flex;
-    list-style: none;
-    font-weight: 200;
+  display: flex;
+  list-style: none;
+  font-weight: 200;
 }
 
 .infoListFull > li {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .plot {
-    font-size: 1.2rem;
-    font-weight: 300;
-    margin-bottom: 5px;
-    text-align: justify;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 5px;
+  text-align: justify;
 }
 
-.actors, .awards {
-    font-weight: 300;
+.actors,
+.awards {
+  font-weight: 300;
 }
-
-
 
 .movieImageSearch {
-    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, 
-        color-stop(0.00,  rgba(0,0,0,1)),
-        color-stop(0.35,  rgba(0,0,0,1)),
-        color-stop(0.50,  rgba(0,0,0,1)),
-        color-stop(0.65,  rgba(0,0,0,1)),
-        color-stop(0.85,  rgba(0,0,0,0.6)),
-        color-stop(1.00,  rgba(0,0,0,0)));
-    /* For compatibility */
-    mask-image: -webkit-gradient(linear, left top, left bottom, 
-        color-stop(0.00,  rgba(0,0,0,1)),
-        color-stop(0.35,  rgba(0,0,0,1)),
-        color-stop(0.50,  rgba(0,0,0,1)),
-        color-stop(0.65,  rgba(0,0,0,1)),
-        color-stop(0.85,  rgba(0,0,0,0.6)),
-        color-stop(1.00,  rgba(0,0,0,0)));
-    width: 100%;
-    border-top-left-radius: 10px; 
-    border-top-right-radius: 10px;
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, rgba(0, 0, 0, 1)),
+    color-stop(0.35, rgba(0, 0, 0, 1)),
+    color-stop(0.5, rgba(0, 0, 0, 1)),
+    color-stop(0.65, rgba(0, 0, 0, 1)),
+    color-stop(0.85, rgba(0, 0, 0, 0.6)),
+    color-stop(1, rgba(0, 0, 0, 0))
+  );
+  /* For compatibility */
+  mask-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, rgba(0, 0, 0, 1)),
+    color-stop(0.35, rgba(0, 0, 0, 1)),
+    color-stop(0.5, rgba(0, 0, 0, 1)),
+    color-stop(0.65, rgba(0, 0, 0, 1)),
+    color-stop(0.85, rgba(0, 0, 0, 0.6)),
+    color-stop(1, rgba(0, 0, 0, 0))
+  );
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .movieImageFull {
-    width: 100%;
-    border-radius: 10px;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .buttonContainer {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .cardButton {
   padding: 5px 24px;
   border-radius: 10px;
+  cursor: pointer;
+  color: black;
 }
-

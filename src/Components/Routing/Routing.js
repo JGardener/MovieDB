@@ -1,24 +1,19 @@
-import {
-    BrowserRouter as Router, 
-    Routes, 
-    Route, 
-    Link 
-} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-import Landing from '../Pages/Landing/Landing';
-import SearchResults from '../Pages/SearchResults/SearchResults';
-import SpecificMovie from '../Pages/SpecificMovie/SpecificMovie';
+import Landing from "../Pages/Landing/Landing";
+import SearchResults from "../Pages/SearchResults/SearchResults";
+import SpecificMovie from "../Pages/SpecificMovie/SpecificMovie";
 
 const Routing = () => {
-    return(
-        <Router>
-            <Routes>
-                <Route path="/moviedb" element={<Landing />}/>
-                <Route path="/results" element={<SearchResults/>}/>
-                <Route path="/results/specific" element={<SpecificMovie/>}/>
-            </Routes>
-        </Router>
-    )
-}
+  return (
+    <Router>
+      <Routes>
+        <Route path="/moviedb" element={<Landing />} />
+        <Route path="/results" element={<SearchResults />} />
+        <Route path="/results/specific" element={<SpecificMovie />} />
+      </Routes>
+    </Router>
+  );
+};
 
 export default Routing;

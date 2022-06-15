@@ -1,4 +1,8 @@
 .wrapper {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+html {
+  height: 100%;
 }

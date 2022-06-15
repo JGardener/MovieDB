@@ -10,7 +10,7 @@ const SpecificMovie = () => {
   useEffect(() => {
     const getMovie = () => {
       fetch(
-        `http://www.omdbapi.com/?i=${location.state.movie}&plot=full&apikey=${process.env.REACT_APP_API_KEY}`
+        `https://www.omdbapi.com/?i=${location.state.movie}&plot=full&apikey=${process.env.REACT_APP_API_KEY}`
       )
         .then((response) => response.json())
         .then((data) => updateMovie(data));
